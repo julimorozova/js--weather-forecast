@@ -9,9 +9,9 @@ export function saveCityList(items) {
 
 export function showCityList(el, list) {
   const element = el;
-  // list.map(item => element.insertAdjacentHTML('afterbegin',`<a>${item}</a>`));
+  //list.map(item => element.insertAdjacentHTML('beforeend',`<a>${item}</a>`));
   element.innerHTML = `${list
-    .map((item) => `<a href="#" class="city_link">${item}</a>`)
+    .map((item) => `<a href="#" class="city_link">${item[0].toUpperCase() + item.slice(1)}</a>`)
     .join("")}`;
 }
 

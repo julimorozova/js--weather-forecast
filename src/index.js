@@ -12,6 +12,7 @@ import { showWeather } from "./core/showWeather";
 
 import { getHistoricalWeatherFromCityList } from "./core/getHistoricalWeatherFromCityList";
 
+
 /* async function getMap() {
   const keyMap = "AIzaSyCFzZfX_ky_YiI8YBmTsZbKWUhS8ofRLUw";
   const urlMap = `https://maps.googleapis.com/maps/api/staticmap?center=Berkeley,CA&zoom=14&size=400x400&key=${keyMap}`;
@@ -30,6 +31,7 @@ import { getHistoricalWeatherFromCityList } from "./core/getHistoricalWeatherFro
   const inputEl = document.querySelector("#userInput");
   const weatherInfoEl = document.querySelector("#weatherInfo");
   const cityListEl = document.querySelector("#historyList");
+  const map = document.querySelector('.map')
 
   await showLocalUserWeather();
 
@@ -42,9 +44,11 @@ import { getHistoricalWeatherFromCityList } from "./core/getHistoricalWeatherFro
 
     const cityName = inputEl.value;
     const weather = await getWeather(cityName);
-
-    const isTrueCity = showWeather(weatherInfoEl, weather);
+    console.log(weather);
+    const isTrueCity = showWeather(weatherInfoEl, weather) || true;
     if (isTrueCity) {
+      //await getMap(weather, map)
+
       addNewCityToCityList(cityName, listCity);
       deleteCity(listCity);
       showCityList(cityListEl, listCity);

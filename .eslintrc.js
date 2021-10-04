@@ -19,5 +19,6 @@ module.exports = {
       },
     ],
     "import/prefer-default-export": "off",
+    "complexity": ["error", { "max": 2 }],
   },
 };
