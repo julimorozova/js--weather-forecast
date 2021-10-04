@@ -5,11 +5,11 @@
     <title>Weather forecast</title>
   </head>
   <body>
-    <h1>Get weather</h1>
-
-    <form id="form" class="weather_form">
+  <h1>Get weather</h1>
+  <!--<div class="box search">
+    <form id="form1" class="weather_form">
       <input
-        id="userInput"
+        id="userInput1"
         placeholder="Type city and press enter"
         required
         autofocus
@@ -17,9 +17,25 @@
       />
       <button class="weather_btn">Get weather</button>
     </form>
+  </div>-->
+
     <div class="wrapper">
-      <div id="weatherInfo" class="weather_info"></div>
-      <div class="city_list" id="historyList"></div>
+      <div class="box map"></div>
+      <div id="weatherInfo" class="box weather_info"></div>
+
+      <div class="box weather-search" >
+          <form id="form" class="weather-search__form">
+            <input
+              id="userInput"
+              placeholder="Enter city"
+              required
+              autofocus
+              class="weather-search__input"
+            />
+            <button class="weather-search__btn">Get weather</button>
+          </form>
+        <div class="city_list" id="historyList"></div>
+      </div>
     </div>
   </body>
 </html>
