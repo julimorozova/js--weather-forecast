@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather forecast</title>
+  <script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+  <h1>Get weather</h1>
+  <!--<div class="box search">
+    <form id="form1" class="weather_form">
+      <input
+        id="userInput1"
+        placeholder="Type city and press enter"
+        required
+        autofocus
+        class="weather_input"
+      />
+      <button class="weather_btn">Get weather</button>
+    </form>
+  </div>-->
+
+    <div class="wrapper">
+      <div class="box map"></div>
+      <div id="weatherInfo" class="box weather_info"></div>
+
+      <div class="box weather-search" >
+          <form id="form" class="weather-search__form">
+            <input
+              id="userInput"
+              placeholder="Enter city"
+              required
+              autofocus
+              class="weather-search__input"
+            />
+            <button class="weather-search__btn">Get weather</button>
+          </form>
+        <div class="city_list" id="historyList"></div>
+      </div>
+    </div>
+  </body>
+</html>
