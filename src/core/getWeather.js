@@ -7,7 +7,7 @@ export async function getWeather(cityName) {
     }
   });
   const responseJson = await response.json();
-  //return responseJson;
+  // return responseJson;
   const a = {
     name: responseJson.name,
     temp: responseJson.main.temp,

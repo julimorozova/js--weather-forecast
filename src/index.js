@@ -47,7 +47,7 @@ import { getHistoricalWeatherFromCityList } from "./core/getHistoricalWeatherFro
     console.log(weather);
     const isTrueCity = showWeather(weatherInfoEl, weather) || true;
     if (isTrueCity) {
-      //await getMap(weather, map)
+      // await getMap(weather, map)
 
       addNewCityToCityList(cityName, listCity);
       deleteCity(listCity);
